@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`prometheus.localhost`)
+    - match: Host(`prometheus.acceleratedit.de`)
       kind: Rule
       services:
         - name: prometheus-kube-prometheus-prometheus

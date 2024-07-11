@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`alertmanager.{{.Values.domain}}`)
+    - match: Host(`alertmanager.acceleratedit.de`)
       kind: Rule
       services:
         - name: {{.Release.Name}}-kube-prometheus-alertmanager

@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/investment-alert-system/stock-data-streamer/app
   pullPolicy: IfNotPresent
-  tag: "b1535f3f6e8104b21e1729aa89d7d1a2e0d4a19d"
+  tag: "0b68369e3b65305a6b3fe94f70070233a7dd58c1"
 
 service:
   type: ClusterIP
@@ -18,4 +18,5 @@ resources:
     cpu: "800m"
 
 ingress:
-  domain: localhost
+  domain: acceleratedit.de
+  #domain: localhost

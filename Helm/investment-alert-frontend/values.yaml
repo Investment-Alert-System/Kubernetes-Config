@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/investment-alert-system/investment-alert-frontend/app
   pullPolicy: IfNotPresent
-  tag: "e11e285565fa8961acee620102e63a48415189e9"
+  tag: "1b66b491da49499f920ad962b17ab868fb77d472"
 
 service:
   type: ClusterIP
@@ -11,12 +11,11 @@ service:
 
 resources:
   requests:
-    memory: "128Mi"
-    cpu: "100m"
+    memory: "512Mi"
+    cpu: "400m"
   limits:
-    memory: "256Mi"
-    cpu: "200m"
+    memory: "1024Mi"
+    cpu: "800m"
 
 ingress:
-  #domain: localhost
   domain: acceleratedit.de
