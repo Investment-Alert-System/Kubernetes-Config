@@ -1,0 +1,5 @@
+.terraform
+../.idea
+.env
+.vs_code
+.DS_Store

@@ -1,0 +1,22 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/investment-alert-system/investment-alert-frontend/app
+  pullPolicy: IfNotPresent
+  tag: "e11e285565fa8961acee620102e63a48415189e9"
+
+service:
+  type: ClusterIP
+  port: 3000
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "200m"
+
+ingress:
+  #domain: localhost
+  domain: acceleratedit.de

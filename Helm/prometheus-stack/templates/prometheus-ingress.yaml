@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: prometheus
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`prometheus.localhost`)
+      kind: Rule
+      services:
+        - name: prometheus-kube-prometheus-prometheus
+          port: 9090

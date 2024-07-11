@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ include "stock-data-streamer.fullname" . }}
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`stock-data-streamer.{{ .Values.ingress.domain }}`)
+      kind: Rule
+      services:
+        - name: "{{.Release.Name}}-stock-data-streamer"
+          port: {{.Values.service.port}}
